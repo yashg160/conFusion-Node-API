@@ -4,11 +4,23 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var dishRouter = require('./routes/dishRouter');
 var promoRouter = require('./routes/promoRouter');
 var leaderRouter = require('./routes/leaderRouter');
+
+const mongoose = require('mongoose');
+
+const Dishes = require('./models/dishes');
+
+const url = 'mongodb://192.168.1.11:27017/confusion';
+const connect = mongoose.connect(url);
+
+connect.then(db => {
+  console.log('Connected to server correctly');
+}, err => { console.log(err); });
 
 var app = express();
 

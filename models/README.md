@@ -1,0 +1,3 @@
+# Synopsis
+
+This repository is part of the Coursera course, Server Sice Development with Node.js and Express, which is in trn part of the specialization, Fullstack Development with React. This project was made later in the course. The React and React Native applications were later modified to use this API to retreive and post data. To use this API, first clone the repository. Run `yarn install` to install all the dependencies. Then run `yarn start` to run the project. Also start the json-server before starting the node project.
